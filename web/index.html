@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MedBook - Doctor Appointment System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">Med<span>Book</span></div>
+        <div class="nav-text">Doctor Appointment System</div>
+    </div>
+</header>
+
+<section class="hero">
+    <div>
+        <p class="small-title">HEALTHCARE APPOINTMENTS</p>
+        <h1>Book your doctor<br>appointment easily.</h1>
+        <p class="hero-text">
+            Choose a doctor, select your preferred time and manage
+            your appointments in one simple place.
+        </p>
+        <a href="#booking" class="hero-button">Book Appointment</a>
+    </div>
+
+    <div class="hero-card">
+        <div class="doctor-icon">+</div>
+        <h3>Professional Care</h3>
+        <p>Simple scheduling with real-time slot validation.</p>
+    </div>
+</section>
+
+<main>
+
+<section id="booking" class="card">
+    <div class="section-heading">
+        <div>
+            <p class="small-title">NEW APPOINTMENT</p>
+            <h2>Book an Appointment</h2>
+        </div>
+    </div>
+
+    <div id="message"></div>
+
+    <form id="bookingForm">
+
+        <div class="form-grid">
+
+            <div class="input-group">
+                <label>Patient Name</label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="input-group">
+                <label>Phone Number</label>
+                <input type="text" name="phone" placeholder="10 digit number" required>
+            </div>
+
+            <div class="input-group">
+                <label>Select Doctor</label>
+                <select name="doctorId" id="doctor" required>
+                    <option value="">Loading doctors...</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Appointment Date</label>
+                <input type="date" name="date" id="date" required>
+            </div>
+
+            <div class="input-group">
+                <label>Appointment Time</label>
+                <input type="time" name="time" required>
+            </div>
+
+        </div>
+
+        <button class="primary-button" type="submit">
+            Confirm Appointment
+        </button>
+
+    </form>
+</section>
+
+<section class="card">
+    <div class="section-heading">
+        <div>
+            <p class="small-title">SCHEDULE</p>
+            <h2>Appointments</h2>
+        </div>
+
+        <button class="refresh" onclick="loadAppointments()">Refresh</button>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Patient</th>
+                    <th>Doctor</th>
+                    <th>Specialization</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody id="appointmentTable">
+                <tr>
+                    <td colspan="8">Loading appointments...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>MedBook • Doctor Appointment Booking System</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

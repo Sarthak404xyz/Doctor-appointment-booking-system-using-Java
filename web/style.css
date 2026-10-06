@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f8fc;
+    color: #172033;
+}
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e8edf4;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    height: 72px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1769aa;
+}
+
+.logo span {
+    color: #19a974;
+}
+
+.nav-text {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.hero {
+    max-width: 1150px;
+    margin: 35px auto 25px;
+    padding: 50px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #eaf6ff, #eefbf7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.small-title {
+    color: #1685a9;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 43px;
+    line-height: 1.1;
+    margin: 0 0 15px;
+}
+
+.hero-text {
+    max-width: 570px;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.hero-button,
+.primary-button {
+    display: inline-block;
+    background: #1769aa;
+    color: white;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.hero-card {
+    background: white;
+    width: 250px;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(23, 105, 170, 0.12);
+}
+
+.hero-card p {
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.doctor-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #e8f7f2;
+    color: #19a974;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    max-width: 1150px;
+    margin: auto;
+    padding: 0 25px 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    margin: 25px 0;
+    border-radius: 16px;
+    box-shadow: 0 5px 25px rgba(15, 23, 42, 0.06);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-heading h2 {
+    margin-top: 0;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+input, select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d8e0ea;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: white;
+}
+
+input:focus, select:focus {
+    border-color: #1769aa;
+}
+
+.primary-button {
+    margin-top: 25px;
+}
+
+.refresh {
+    border: 1px solid #d5dde8;
+    background: white;
+    padding: 9px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+th {
+    background: #f7f9fc;
+    color: #64748b;
+    text-align: left;
+}
+
+th, td {
+    padding: 13px 10px;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.cancel {
+    border: none;
+    background: #fff0f0;
+    color: #dc2626;
+    padding: 7px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#message {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.success {
+    color: #15803d;
+    background: #ecfdf3;
+    padding: 12px;
+    border-radius: 7px;
+}
+
+.error {
+    color: #b91c1c;
+    background: #fff1f2;
+    padding: 12px;
+    border-radius: 7px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+@media (max-width: 750px) {
+    .hero {
+        margin: 20px;
+        padding: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-card {
+        width: 100%;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-text {
+        display: none;
+    }
+}
